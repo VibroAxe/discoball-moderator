@@ -1,0 +1,14 @@
+{
+    "name": "Moderator",
+    "author": {
+       "name": "VibroAxe",
+       "email": "vibs@macrolevel.co.uk"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/VibroAxe/discoball-moderator.git"
+    },
+    "entryPoints": [
+        "moderator.js"
+    ]
+}
