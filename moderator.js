@@ -33,28 +33,8 @@ class moderatorModule {
 			});
 		});
 		msg.reply("Moderated "+limit+" lines");
-		msg.delete().cathc();
+		msg.delete().catch();
 	}
 
-	googleCommand(msg) {
-		var req = "<http://lmgtfy.com/?q="+msg.content.substr(msg.content.indexOf(" ") + 1)+">";
-		req = req.replace(/ /g,"%20");
-		msg.channel.send(req);
-		msg.delete();
-	}
-
-	pingCommand(msg) {
-		var self = this;
-		self.bot.checkCooldown("ping", function(){
-			self.bot.addCooldown("ping", 60);
-			msg.react("🇵").then(function(){
-				msg.react("🇴").then(function(){
-					msg.react("🇳").then(function(){
-						msg.react("🇬").then().catch(console.error);
-					}).catch(console.error);
-				}).catch(console.error);
-			}).catch(console.error);
-		});
-	}
 }
 module.exports = moderatorModule;
