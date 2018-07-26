@@ -9,6 +9,7 @@
         "url": "https://github.com/VibroAxe/discoball-moderator.git"
     },
     "entryPoints": [
-        "moderator.js"
+        "moderator.js",
+		"quarantine.js"
     ]
 }
