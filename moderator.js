@@ -17,7 +17,7 @@ class moderatorModule {
 			permCheck: self.perms.isAdmin
 		});
 		self.commands.addCommand({
-			trigger: "!delete",
+			trigger: ["!delete","!moderate"],
 			function: self.deleteCommand,
 			permCheck: self.perms.isAdmin
 		});
