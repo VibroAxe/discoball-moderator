@@ -76,7 +76,7 @@ class quarantine {
 				qChannel.send(target.toString() + " you have been quarantined by "+msg.author.toString()+" for "+length+minuteText+" for "+reason);
 				qChannel.send("Please feel free to use this channel to discuss your case");
 			}
-			msg.reply("Quarantining "+target.displayName+" for "+length+" minutes ("+reason+")");
+			msg.reply("Quarantining "+target.displayName+" for "+length+minuteText+" ("+reason+")");
 			msg.delete().catch();
 		} else {
 			var qChannel = msg.guild.channels.find("name","quarantine");
