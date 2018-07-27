@@ -70,8 +70,10 @@ class quarantine {
 			//schedule unq
 			setTimeout(this.unquarantineCommand.bind(this, msg, target),length*60*1000);
 			var qChannel = msg.guild.channels.find("name","quarantine");
+			var minuteText = length>1 ? " minutes" : " minute";
+
 			if(qChannel) {
-				qChannel.send(target.toString() + " you have been quarantined by "+msg.author.toString()+" for "+length+" minutes for "+reason);
+				qChannel.send(target.toString() + " you have been quarantined by "+msg.author.toString()+" for "+length+minuteText+" for "+reason);
 				qChannel.send("Please feel free to use this channel to discuss your case");
 			}
 			msg.reply("Quarantining "+target.displayName+" for "+length+" minutes ("+reason+")");
